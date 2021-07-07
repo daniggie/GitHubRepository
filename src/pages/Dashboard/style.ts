@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { shade } from 'polished';
 
 export const Title = styled.h1`
-  color: #0083e8;
-  font-size: 50px;
-  font-family: cursive;
+  color: #000;
+  font-size: 25px;
+  font-family: sans-serif;
   max-width: 450px;
 
   margin-top: 80px;
@@ -17,7 +17,7 @@ export const Form = styled.form`
 
   input {
     flex: 1;
-    height: 60px;
+    height: 40px;
     padding: 0 24px;
     border: 0;
     border-radius: 5px 0 0 5px;
@@ -29,19 +29,20 @@ export const Form = styled.form`
   }
 
   button {
-    width: 210px;
-    heigth: 70px;
-    background: #04d361;
+    width: 75px;
+    heigth: 40px;
+    background: #6e6e6e;
     border-radius: 0 5px 5px 0;
     border: 0;
     color: #fff;
-    font-weight: bold;
+    font-size: 12px;
 
-    transition: background-color: 0.2s;
+    transition: background-color 0.2s;
 
     &:hover {
-      brackground: ${shade(0.2, '#04d361')};
+      background: ${shade(0.2, '#6e6e6e')};
     }
+
   }
 
 `;
@@ -50,27 +51,46 @@ export const Repositories = styled.div`
   margin-top: 40px;
   max-width: 700px;
 
-  display:flex;
+  a {
 
-  img{
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-  }
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    padding: 24px;
+    display: block;
+    text-decoration: none;
 
-  div{
-    margin: 0 16px;
+    display: flex;
+    align-items: center;
 
-    strong {
-      font-size: 20px;
-      color: #3d3d4d;
+    transition: transform 0.2s;
+
+    &:hover{
+      transform: translate(10px);
     }
 
-    p {
-      font-size: 18px;
-      color: #a9a9b9;
-      margin-top: 4px;
+    & + a{
+      margin-top:16px;
     }
-  }
 
-`;
+    img{
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    }
+
+    div{
+      margin: 0 16px;
+
+      strong {
+        font-size: 20px;
+        color: #3d3d4d;
+      }
+
+      p {
+        font-size: 18px;
+        color: #a9a9b9;
+        margin-top: 4px;
+      }
+    }
+}`;
